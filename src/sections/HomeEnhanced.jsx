@@ -34,7 +34,6 @@ export default function HomeEnhanced() {
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
-            filter: 'blur(8px) brightness(0.5)',
           }}
         />
         {/* Overlay */}
