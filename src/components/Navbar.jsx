@@ -9,7 +9,7 @@ export default function Navbar({ activeSection }) {
     { label: 'Home', id: 'home' },
     { label: 'Tour', id: 'tour' },
     { label: 'Rooms', id: 'accommodations' },
-    { label: 'Experiences', id: 'farmhouse' },
+    { label: 'Dining', id: 'dining' },
     { label: 'Shop', id: 'shop' },
     { label: 'Contact', id: 'contact' },
   ]
