@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import InteractiveTour from './components/InteractiveTour'
-import LuxuryHero from './sections/LuxuryHero'
-import FeaturedExperience from './sections/FeaturedExperience'
-import LuxuryRooms from './sections/LuxuryRooms'
-import LuxuryDining from './sections/LuxuryDining'
+import HomeEnhanced from './sections/HomeEnhanced'
+import Farmhouse from './sections/Farmhouse'
 import Shop from './sections/Shop'
+import Service from './sections/Service'
 import Contact from './sections/Contact'
 
 export default function App() {
@@ -44,12 +42,10 @@ export default function App() {
       <Navbar activeSection={activeSection} />
 
       <main>
-        <LuxuryHero />
-        <FeaturedExperience />
-        <InteractiveTour />
-        <LuxuryRooms />
-        <LuxuryDining />
+        <HomeEnhanced />
+        <Farmhouse />
         <Shop />
+        <Service />
         <Contact />
       </main>
 

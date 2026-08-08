@@ -7,11 +7,10 @@ export default function Navbar({ activeSection }) {
 
   const navLinks = [
     { label: 'Home', id: 'home' },
-    { label: 'Tour', id: 'tour' },
-    { label: 'Rooms', id: 'accommodations' },
-    { label: 'Dining', id: 'dining' },
+    { label: 'Farmhouse', id: 'farmhouse' },
     { label: 'Shop', id: 'shop' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Service', id: 'service' },
+    { label: 'Contact Us', id: 'contact' },
   ]
 
   useEffect(() => {

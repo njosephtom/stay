@@ -2,23 +2,22 @@ import ContactForm from '../components/ContactForm'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 px-4 bg-warm-cream scroll-mt-16">
+    <section id="contact" className="py-20 px-4 bg-cream scroll-mt-16">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="bg-soft-blue-dark text-white py-12 rounded-lg mb-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold uppercase">Get In Touch</h2>
-          <p className="text-lg mt-4">We'd love to hear from you. Reach out with any questions!</p>
+        <div className="bg-terracotta text-white py-16 rounded-2xl mb-16 text-center shadow-lg">
+          <h2 className="text-5xl md:text-6xl font-serif font-bold mb-4">Get In Touch</h2>
+          <p className="text-lg text-white/90">We'd love to hear from you. Reach out with any questions!</p>
         </div>
 
         {/* Intro */}
-        <div className="text-center mb-12">
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
-            At Avni Farm and Craft, we believe in fostering genuine connections through sustainable living and traditional crafts.
-            Whether you're looking for a peaceful retreat, eager to learn artisan skills, or simply want to experience authentic
-            farm-to-table dining, we're here to make it unforgettable.
+        <div className="text-center mb-16 fade-on-scroll opacity-0">
+          <p className="text-xl text-light-text max-w-3xl mx-auto mb-4 leading-relaxed">
+            At Avni Farm and Craft, we believe in fostering genuine connections through sustainable living. Whether you're looking for a
+            peaceful retreat or simply want to experience authentic farm-to-table dining, we're here to make it unforgettable.
           </p>
-          <p className="text-gray-600">
-            Write to us at <span className="font-semibold">info@avni-farmstay.com</span> or fill out the form below.
+          <p className="text-light-text">
+            Write to us at <span className="font-semibold text-terracotta">info@avni-farmstay.com</span> or fill out the form below.
           </p>
         </div>
 
@@ -28,27 +27,28 @@ export default function Contact() {
         </div>
 
         {/* Quote Section */}
-        <div className="bg-soft-blue/30 p-8 rounded-lg mb-12 border-l-4 border-sage">
-          <p className="text-xl font-serif italic text-gray-800 mb-4">
-            "We are the heart and soul behind Avni Farm Stay. Our mission is to create meaningful experiences that celebrate
-            the beauty of rural living, sustainable agriculture, and the timeless art of traditional crafts."
+        <div className="bg-sage text-white p-12 rounded-2xl mb-16 border-l-4 border-terracotta shadow-lg fade-on-scroll opacity-0">
+          <p className="text-2xl font-serif italic mb-6 leading-relaxed">
+            "We are the heart and soul behind Avni Farm Stay. Our mission is to create meaningful experiences that celebrate the beauty
+            of rural living, sustainable agriculture, and genuine hospitality."
           </p>
-          <p className="text-sage font-script text-2xl">— The Avni Family</p>
+          <p className="text-terracotta-light font-serif text-xl">— The Avni Family</p>
         </div>
 
         {/* Couple Photo */}
-        <div className="mb-12 text-center">
+        <div className="mb-16 text-center fade-on-scroll opacity-0">
           <img
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
             alt="The Avni Family"
-            className="w-40 h-40 rounded-full mx-auto object-cover shadow-lg"
+            className="w-48 h-48 rounded-full mx-auto object-cover shadow-2xl border-4 border-terracotta"
           />
+          <p className="text-light-text mt-4 italic">Meet the heart behind Avni</p>
         </div>
 
         {/* Map & Contact Info */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Map */}
-          <div className="rounded-lg overflow-hidden shadow-lg h-96">
+          <div className="rounded-2xl overflow-hidden shadow-xl h-96 fade-on-scroll opacity-0">
             <iframe
               title="Avni Farm Location"
               width="100%"
@@ -62,31 +62,31 @@ export default function Contact() {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-serif font-bold text-dark-text mb-6">Contact Information</h3>
+          <div className="bg-white p-10 rounded-2xl shadow-lg fade-on-scroll opacity-0">
+            <h3 className="text-3xl font-serif font-bold text-dark-text mb-8">Contact Us</h3>
 
-            <div className="mb-6">
-              <h4 className="font-semibold text-dark-text mb-2">Address</h4>
-              <p className="text-gray-600">
+            <div className="mb-8 pb-8 border-b border-cream-dark">
+              <h4 className="font-semibold text-dark-text mb-3 text-lg">Address</h4>
+              <p className="text-light-text leading-relaxed">
                 Avni Farm and Craft<br />
                 Wayanad, Kerala 673591<br />
                 India
               </p>
             </div>
 
-            <div className="mb-6">
-              <h4 className="font-semibold text-dark-text mb-2">Email</h4>
-              <p className="text-gray-600">
-                <a href="mailto:info@avni-farmstay.com" className="text-sage hover:underline">
+            <div className="mb-8 pb-8 border-b border-cream-dark">
+              <h4 className="font-semibold text-dark-text mb-3 text-lg">Email</h4>
+              <p>
+                <a href="mailto:info@avni-farmstay.com" className="text-terracotta hover:text-terracotta-dark font-semibold transition-colors">
                   info@avni-farmstay.com
                 </a>
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold text-dark-text mb-2">Phone</h4>
-              <p className="text-sage font-bold text-lg">1-800-000-0000</p>
-              <p className="text-gray-600 text-sm">Any questions? Call us anytime!</p>
+              <h4 className="font-semibold text-dark-text mb-3 text-lg">Phone</h4>
+              <p className="text-terracotta font-bold text-xl mb-2">1-800-000-0000</p>
+              <p className="text-light-text text-sm">Available 24/7 for your inquiries</p>
             </div>
           </div>
         </div>
