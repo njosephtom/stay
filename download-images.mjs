@@ -12,7 +12,7 @@ if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 const images = {
   'hero-farm.jpg': 'https://images.unsplash.com/photo-1500382017468-7049fae79e1d?w=1920&h=1080&fit=crop',
   'farm-stay.jpg': 'https://images.unsplash.com/photo-1470114716159-e389f8712fda?w=600&h=500&fit=crop',
-  'organic-food.jpg': 'https://images.unsplash.com/photo-1488459716781-6818c6737d7b?w=600&h=500&fit=crop',
+  'organic-food.png': 'https://images.unsplash.com/photo-1488459716781-6818c6737d7b?w=600&h=500&fit=crop',
   'rural-retreat.jpg': 'https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?w=600&h=500&fit=crop',
 };
 

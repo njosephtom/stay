@@ -10,7 +10,7 @@ const publicDir = path.join(__dirname, 'public');
 const images = {
   'vase.jpg': 'https://images.unsplash.com/photo-1609640984244-8d1e3b9bfbd5?w=500&h=500&fit=crop&q=80',
   'mug.jpg': 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&h=500&fit=crop&q=80',
-  'organic-food.jpg': 'https://images.unsplash.com/photo-1488459716781-6818c6737d7b?w=600&h=500&fit=crop&q=80',
+  'organic-food.png': 'https://images.unsplash.com/photo-1488459716781-6818c6737d7b?w=600&h=500&fit=crop&q=80',
   'pillowcase.jpg': 'https://images.unsplash.com/photo-1584622180039-91f8ba1c1a0e?w=500&h=500&fit=crop&q=80',
   'rural-retreat.jpg': 'https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?w=600&h=500&fit=crop&q=80',
   'sweater.jpg': 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop&q=80',

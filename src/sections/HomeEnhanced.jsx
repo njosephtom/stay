@@ -30,7 +30,7 @@ export default function HomeEnhanced() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-7049fae79e1d?w=1920&h=1080&fit=crop)',
+            backgroundImage: 'url(/farmhouse.jpeg)',
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
