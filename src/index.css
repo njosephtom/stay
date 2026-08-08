@@ -65,10 +65,15 @@
 
 html {
   scroll-behavior: smooth;
+  background-image: url('/farmhouse.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px) brightness(0.3);
 }
 
 body {
-  @apply bg-cream text-dark-text font-sans;
+  @apply text-dark-text font-sans;
 }
 
 /* Dark section amenity cards */
