@@ -6,14 +6,13 @@ export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const products = [
-    { id: 1, name: 'Ceramic Flower Vase', price: 2500, image: '/vase.jpg', category: 'pottery', badge: 'Best Seller' },
-    { id: 2, name: 'Minimalist Tote Bag', price: 1800, image: '/tote-bag.jpg', category: 'textile', badge: 'New' },
-    { id: 3, name: 'Hydrating Eye Serum', price: 3200, image: '/eye-serum.jpg', category: 'wellness', badge: null },
-    { id: 4, name: 'Knitted Golf Sweater', price: 4500, image: '/sweater.jpg', category: 'clothing', badge: 'Sale' },
-    { id: 5, name: 'Round Eyeglasses', price: 3800, image: '/eyeglasses.jpg', category: 'accessories', badge: null },
-    { id: 6, name: 'Solid Wood Chair', price: 5500, image: '/chair.jpg', category: 'furniture', badge: 'New' },
-    { id: 7, name: 'Organic Cotton Pillowcase', price: 1200, image: '/pillowcase.jpg', category: 'textile', badge: null },
-    { id: 8, name: 'Hand-thrown Coffee Mug', price: 800, image: '/mug.jpg', category: 'pottery', badge: 'Best Seller' },
+    { id: 1, name: 'Minimalist Tote Bag', price: 1800, image: '/tote-bag.jpg', category: 'textile', badge: 'New' },
+    { id: 2, name: 'Hydrating Eye Serum', price: 3200, image: '/eye-serum.jpg', category: 'wellness', badge: null },
+    { id: 3, name: 'Knitted Golf Sweater', price: 4500, image: '/sweater.jpg', category: 'clothing', badge: 'Sale' },
+    { id: 4, name: 'Round Eyeglasses', price: 3800, image: '/eyeglasses.jpg', category: 'accessories', badge: null },
+    { id: 5, name: 'Solid Wood Chair', price: 5500, image: '/chair.jpg', category: 'furniture', badge: 'New' },
+    { id: 6, name: 'Hand-thrown Coffee Mug', price: 800, image: '/mug.jpg', category: 'pottery', badge: 'Best Seller' },
+    { id: 7, name: 'Premium Farm-to-Table Gift Set', price: 2200, image: '/farm-stay.jpg', category: 'pottery', badge: 'Best Seller' },
   ]
 
   const filteredProducts = products.filter((product) => {
