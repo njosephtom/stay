@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import InteractiveTour from './components/InteractiveTour'
 import Home from './sections/Home'
 import Farmhouse from './sections/Farmhouse'
 import Shop from './sections/Shop'
@@ -43,6 +44,7 @@ export default function App() {
 
       <main>
         <Home />
+        <InteractiveTour />
         <Farmhouse />
         <Shop />
         <Service />

@@ -5,6 +5,7 @@ export default function Navbar({ activeSection }) {
 
   const navLinks = [
     { label: 'Home', id: 'home' },
+    { label: 'Tour', id: 'tour' },
     { label: 'Farmhouse', id: 'farmhouse' },
     { label: 'Shop', id: 'shop' },
     { label: 'Service', id: 'service' },

@@ -16,17 +16,31 @@ A beautiful, scroll-based single-page React website for "Avni Farm and Craft" �
 ## Sections
 
 1. **Home** — Hero image with welcome card + guest testimonials grid
-2. **Farmhouse** — Alternating text/image blocks describing farm stay, organic food, and nature experiences
-3. **Shop** — Product grid with sidebar filters (price range, category)
-4. **Service** — Service offerings with hero banner and numbered service cards
-5. **Contact** — Contact form, map embed, contact details, and quote from the owners
+2. **Interactive Tour** ✨ — 360° scroll-driven panoramic farm experience with hotspots (NEW!)
+3. **Farmhouse** — Alternating text/image blocks describing farm stay, organic food, and nature experiences
+4. **Shop** — Product grid with sidebar filters (price range, category)
+5. **Service** — Service offerings with hero banner and numbered service cards
+6. **Contact** — Contact form, map embed, contact details, and quote from the owners
+
+### ✨ Interactive 360° Tour
+
+A scroll-driven 3D panoramic viewer powered by **Three.js** and **GSAP ScrollTrigger**. Features:
+- Rotate a 360° farm panorama by scrolling
+- Four interactive hotspots (Cottages, Orchard, Dining, Relaxation)
+- Hotspot cards with images and descriptions appear as you scroll
+- Toggle between **scroll mode** and **drag mode** for desktop/mobile
+- Smooth rotation interpolation and mobile optimization
+
+**[→ See detailed tour documentation](./INTERACTIVE_TOUR.md)**
 
 ## Tech Stack
 
 - **React 18** — Functional components with hooks
 - **Vite** — Fast build tool and dev server
 - **Tailwind CSS** — Utility-first styling
-- **Intersection Observer API** — Scroll-spy navigation (no external deps needed)
+- **Three.js** — 3D scene rendering (360° panorama viewer)
+- **GSAP + ScrollTrigger** — Advanced scroll animations and pinning
+- **Intersection Observer API** — Scroll-spy navigation
 
 ## Installation & Setup
 
@@ -61,24 +75,26 @@ A beautiful, scroll-based single-page React website for "Avni Farm and Craft" �
 
 ```
 src/
-├── components/           # Reusable UI components
-│   ├── Navbar.jsx       # Sticky nav with scroll-spy
-│   ├── Hero.jsx         # Hero section wrapper
+├── components/              # Reusable UI components
+│   ├── Navbar.jsx          # Sticky nav with scroll-spy
+│   ├── Hero.jsx            # Hero section wrapper
+│   ├── InteractiveTour.jsx  # 360° scroll-driven farm tour (Three.js + GSAP)
+│   ├── Hotspot.jsx         # Interactive hotspot markers
 │   ├── TestimonialCard.jsx
 │   ├── TextImageBlock.jsx
 │   ├── ProductCard.jsx
 │   ├── ServiceCard.jsx
 │   ├── ContactForm.jsx
 │   └── Footer.jsx
-├── sections/            # Page sections
+├── sections/                # Page sections
 │   ├── Home.jsx
 │   ├── Farmhouse.jsx
 │   ├── Shop.jsx
 │   ├── Service.jsx
 │   └── Contact.jsx
-├── App.jsx              # Main app with scroll-spy logic
-├── main.jsx             # React entry point
-└── index.css            # Tailwind + custom animations
+├── App.jsx                  # Main app with scroll-spy logic
+├── main.jsx                 # React entry point
+└── index.css                # Tailwind + custom animations
 ```
 
 ## Customization
@@ -110,6 +126,13 @@ Update section content directly in the component files:
 
 ### Contact Details
 Update email, phone, and address in `Contact.jsx`
+
+### Interactive 360° Tour
+Customize the panorama and hotspots:
+- Replace equirectangular farm image (2048×1024 recommended)
+- Edit `HOTSPOTS` array in `InteractiveTour.jsx` (angle, label, description, image)
+- Adjust scroll sensitivity, rotation smoothing, and hotspot visibility
+- See [INTERACTIVE_TOUR.md](./INTERACTIVE_TOUR.md) for detailed configuration
 
 ## Features Explained
 
