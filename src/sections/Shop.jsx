@@ -6,14 +6,14 @@ export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const products = [
-    { id: 1, name: 'Ceramic Flower Vase', price: 2500, image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e0b923?w=500&h=500&fit=crop', category: 'pottery', badge: 'Best Seller' },
-    { id: 2, name: 'Minimalist Tote Bag', price: 1800, image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=500&fit=crop', category: 'textile', badge: 'New' },
-    { id: 3, name: 'Hydrating Eye Serum', price: 3200, image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=500&fit=crop', category: 'wellness', badge: null },
-    { id: 4, name: 'Knitted Golf Sweater', price: 4500, image: 'https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=500&h=500&fit=crop', category: 'clothing', badge: 'Sale' },
-    { id: 5, name: 'Round Eyeglasses', price: 3800, image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop', category: 'accessories', badge: null },
-    { id: 6, name: 'Solid Wood Chair', price: 5500, image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=500&fit=crop', category: 'furniture', badge: 'New' },
-    { id: 7, name: 'Organic Cotton Pillowcase', price: 1200, image: 'https://images.unsplash.com/photo-1584622180039-91f8ba1c1a0e?w=500&h=500&fit=crop', category: 'textile', badge: null },
-    { id: 8, name: 'Hand-thrown Coffee Mug', price: 800, image: 'https://images.unsplash.com/photo-1569701813229-fdc5978d7be8?w=500&h=500&fit=crop', category: 'pottery', badge: 'Best Seller' },
+    { id: 1, name: 'Ceramic Flower Vase', price: 2500, image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e0b923?w=500&h=500&fit=crop&q=80', category: 'pottery', badge: 'Best Seller' },
+    { id: 2, name: 'Minimalist Tote Bag', price: 1800, image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=500&fit=crop&q=80', category: 'textile', badge: 'New' },
+    { id: 3, name: 'Hydrating Eye Serum', price: 3200, image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=500&fit=crop&q=80', category: 'wellness', badge: null },
+    { id: 4, name: 'Knitted Golf Sweater', price: 4500, image: 'https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=500&h=500&fit=crop&q=80', category: 'clothing', badge: 'Sale' },
+    { id: 5, name: 'Round Eyeglasses', price: 3800, image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop&q=80', category: 'accessories', badge: null },
+    { id: 6, name: 'Solid Wood Chair', price: 5500, image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=500&fit=crop&q=80', category: 'furniture', badge: 'New' },
+    { id: 7, name: 'Organic Cotton Pillowcase', price: 1200, image: 'https://images.unsplash.com/photo-1584622180039-91f8ba1c1a0e?w=500&h=500&fit=crop&q=80', category: 'textile', badge: null },
+    { id: 8, name: 'Hand-thrown Coffee Mug', price: 800, image: 'https://images.unsplash.com/photo-1569701813229-fdc5978d7be8?w=500&h=500&fit=crop&q=80', category: 'pottery', badge: 'Best Seller' },
   ]
 
   const filteredProducts = products.filter((product) => {
