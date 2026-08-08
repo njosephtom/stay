@@ -9,7 +9,7 @@ export default function Shop() {
     { id: 1, name: 'Minimalist Tote Bag', price: 1800, image: '/tote-bag.jpg', category: 'textile', badge: 'New' },
     { id: 2, name: 'Hydrating Eye Serum', price: 3200, image: '/eye-serum.jpg', category: 'wellness', badge: null },
     { id: 3, name: 'Knitted Golf Sweater', price: 4500, image: '/sweater.jpg', category: 'clothing', badge: 'Sale' },
-    { id: 4, name: 'Round Eyeglasses', price: 3800, image: '/eyeglasses.jpg', category: 'accessories', badge: null },
+    { id: 4, name: 'Organic Farm-Fresh Produce Box', price: 3800, image: '/organic-food.png', category: 'pottery', badge: 'New' },
     { id: 5, name: 'Solid Wood Chair', price: 5500, image: '/chair.jpg', category: 'furniture', badge: 'New' },
     { id: 6, name: 'Hand-thrown Coffee Mug', price: 800, image: '/mug.jpg', category: 'pottery', badge: 'Best Seller' },
     { id: 7, name: 'Premium Farm-to-Table Gift Set', price: 2200, image: '/farm-stay.jpg', category: 'pottery', badge: 'Best Seller' },
