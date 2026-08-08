@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import InteractiveTour from './components/InteractiveTour'
-import Home from './sections/Home'
+import PremiumHome from './sections/PremiumHome'
+import Accommodations from './sections/Accommodations'
 import Farmhouse from './sections/Farmhouse'
 import Shop from './sections/Shop'
 import Service from './sections/Service'
@@ -43,8 +44,9 @@ export default function App() {
       <Navbar activeSection={activeSection} />
 
       <main>
-        <Home />
+        <PremiumHome />
         <InteractiveTour />
+        <Accommodations />
         <Farmhouse />
         <Shop />
         <Service />

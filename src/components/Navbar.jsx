@@ -2,15 +2,25 @@ import { useState, useEffect } from 'react'
 
 export default function Navbar({ activeSection }) {
   const [cartCount] = useState(0)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [showBooking, setShowBooking] = useState(false)
 
   const navLinks = [
     { label: 'Home', id: 'home' },
     { label: 'Tour', id: 'tour' },
-    { label: 'Farmhouse', id: 'farmhouse' },
+    { label: 'Rooms', id: 'accommodations' },
+    { label: 'Experiences', id: 'farmhouse' },
     { label: 'Shop', id: 'shop' },
-    { label: 'Service', id: 'service' },
-    { label: 'Contact Us', id: 'contact' },
+    { label: 'Contact', id: 'contact' },
   ]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
@@ -20,18 +30,36 @@ export default function Navbar({ activeSection }) {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-warm-cream shadow-md">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between md:justify-center md:relative">
-        {/* Nav Links - Left side on desktop, hidden on mobile until we add menu */}
-        <div className="hidden md:flex gap-6 absolute left-4">
+    <nav
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-lg py-2' : 'bg-cream shadow-md py-4'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+        {/* Logo - Left */}
+        <div className={`transition-all duration-300 ${isScrolled ? 'flex-shrink-0' : 'flex-1'}`}>
+          <button onClick={() => scrollToSection('home')} className="text-left hover:opacity-80 transition-opacity">
+            <h1 className={`font-serif font-bold text-dark-text transition-all duration-300 ${
+              isScrolled ? 'text-xl' : 'text-2xl md:text-3xl'
+            }`}>
+              Avni Farm & Craft
+            </h1>
+            {!isScrolled && (
+              <p className="text-xs italic text-light-text">Premium Farmstay Retreat</p>
+            )}
+          </button>
+        </div>
+
+        {/* Nav Links - Center (hidden on mobile) */}
+        <div className="hidden md:flex gap-8 flex-1 justify-center">
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`text-sm font-medium transition-colors ${
+              className={`font-medium transition-all duration-300 text-sm ${
                 activeSection === link.id
-                  ? 'text-sage border-b-2 border-sage'
-                  : 'text-dark-text hover:text-sage'
+                  ? 'text-terracotta border-b-2 border-terracotta'
+                  : 'text-light-text hover:text-terracotta'
               }`}
             >
               {link.label}
@@ -39,30 +67,24 @@ export default function Navbar({ activeSection }) {
           ))}
         </div>
 
-        {/* Logo/Title - Center */}
-        <div className="text-center">
-          <h1 className="text-2xl md:text-3xl font-serif font-bold text-dark-text">
-            Avni Farm and Craft
-          </h1>
-          <p className="text-xs italic text-gray-600">Farmhouse Vacation Rental</p>
+        {/* Right - Book Now Button & Icons */}
+        <div className="flex items-center gap-4 md:gap-6">
+          <button
+            onClick={() => scrollToSection('home')}
+            className={`hidden sm:block font-bold transition-all duration-300 py-2 px-4 rounded-lg ${
+              isScrolled
+                ? 'bg-terracotta text-white text-sm'
+                : 'bg-terracotta/10 text-terracotta text-sm md:text-base md:px-6 md:py-2'
+            }`}
+          >
+            Book Now
+          </button>
+          <button className="text-xl hover:text-terracotta transition-colors">👤</button>
         </div>
 
-        {/* Right Icons */}
-        <div className="flex gap-4 absolute right-4">
-          <button className="text-2xl hover:text-sage transition-colors">👤</button>
-          <div className="relative">
-            <button className="text-2xl hover:text-sage transition-colors">🛒</button>
-            {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-sage text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                {cartCount}
-              </span>
-            )}
-          </div>
-        </div>
-
-        {/* Mobile Menu Toggle - shown on small screens */}
-        <div className="md:hidden absolute left-4">
-          <button className="text-xl">☰</button>
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden">
+          <button className="text-2xl hover:text-terracotta transition-colors">☰</button>
         </div>
       </div>
     </nav>

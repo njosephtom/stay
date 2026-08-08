@@ -8,11 +8,16 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-sage hover:bg-sage-light text-white rounded-lg transition-colors font-medium;
+    @apply px-6 py-3 bg-terracotta hover:bg-terracotta-dark text-white rounded-lg transition-colors font-medium;
   }
 
   .fade-in {
     animation: fadeIn 0.8s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  .fade-on-scroll {
+    animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
   }
 }
@@ -21,6 +26,17 @@
   from {
     opacity: 0;
     transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -52,5 +68,15 @@ html {
 }
 
 body {
-  @apply bg-warm-cream text-dark-text font-sans;
+  @apply bg-cream text-dark-text font-sans;
+}
+
+/* Dark section amenity cards */
+.bg-dark-text .fade-on-scroll {
+  @apply opacity-0;
+}
+
+/* Premium hotel-style buttons */
+.btn-book {
+  @apply px-6 py-3 bg-terracotta text-white font-bold rounded-lg hover:bg-terracotta-dark transition-all duration-300 shadow-lg hover:shadow-2xl;
 }
