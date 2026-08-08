@@ -24,8 +24,9 @@ export default function HomeEnhanced() {
 
   return (
     <section id="home" className="scroll-mt-16">
-      {/* Hero Section with Farm Image */}
+      {/* Hero Section with Farmhouse Image - Blurred Background */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Blurred Background */}
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -33,10 +34,11 @@ export default function HomeEnhanced() {
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            filter: 'blur(8px) brightness(0.5)',
           }}
-        >
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/30 z-0" />
 
         <div className="relative z-10 text-center text-white px-4 max-w-3xl">
           <h1 className="text-7xl md:text-8xl font-serif font-bold mb-6">Avni Farm</h1>
@@ -47,6 +49,19 @@ export default function HomeEnhanced() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce text-white text-2xl">↓</div>
+      </div>
+
+      {/* Featured Farmhouse Image */}
+      <div className="bg-cream py-0 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl overflow-hidden shadow-2xl h-96 md:h-[500px] fade-on-scroll opacity-0 mb-20">
+            <img
+              src="https://images.unsplash.com/photo-1500382017468-7049fae79e1d?w=1200&h=600&fit=crop"
+              alt="Avni Farmhouse"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Welcome Section */}

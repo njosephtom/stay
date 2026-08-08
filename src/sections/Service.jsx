@@ -38,7 +38,7 @@ export default function Service() {
   return (
     <section id="service" className="scroll-mt-16">
       {/* Hero Banner */}
-      <div className="bg-soft-blue-dark py-12 px-4">
+      <div className="bg-sage text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             {/* Main Image */}
@@ -69,9 +69,12 @@ export default function Service() {
       </div>
 
       {/* Services Grid */}
-      <div className="py-16 px-4 bg-white">
+      <div className="py-20 px-4 bg-cream">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-serif font-bold text-center text-dark-text mb-12">What We Offer</h3>
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-widest text-terracotta font-semibold mb-4">Our Services</p>
+            <h3 className="text-5xl font-serif font-bold text-dark-text">What We Offer</h3>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <ServiceCard

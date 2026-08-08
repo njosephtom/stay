@@ -23,9 +23,15 @@ export default function Shop() {
   })
 
   return (
-    <section id="shop" className="py-16 px-4 bg-warm-cream scroll-mt-16">
+    <section id="shop" className="py-20 px-4 bg-cream scroll-mt-16">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-title text-center mb-12">Artisan Shop</h2>
+        <div className="text-center mb-16">
+          <p className="text-sm uppercase tracking-widest text-terracotta font-semibold mb-4">Handcrafted Collection</p>
+          <h2 className="text-5xl font-serif font-bold text-dark-text mb-6">Artisan Shop</h2>
+          <p className="text-xl text-light-text max-w-2xl mx-auto">
+            Discover our curated selection of handcrafted and artisan products from local creators
+          </p>
+        </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Filters */}
