@@ -1,0 +1,95 @@
+import { useState } from 'react'
+import ProductCard from '../components/ProductCard'
+
+export default function Shop() {
+  const [priceRange, setPriceRange] = useState(5000)
+  const [selectedCategory, setSelectedCategory] = useState('all')
+
+  const products = [
+    { id: 1, name: 'Ceramic Flower Vase', price: 2500, image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e0b923?w=500&h=500&fit=crop', category: 'pottery', badge: 'Best Seller' },
+    { id: 2, name: 'Minimalist Tote Bag', price: 1800, image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=500&fit=crop', category: 'textile', badge: 'New' },
+    { id: 3, name: 'Hydrating Eye Serum', price: 3200, image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=500&fit=crop', category: 'wellness', badge: null },
+    { id: 4, name: 'Knitted Golf Sweater', price: 4500, image: 'https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=500&h=500&fit=crop', category: 'clothing', badge: 'Sale' },
+    { id: 5, name: 'Round Eyeglasses', price: 3800, image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop', category: 'accessories', badge: null },
+    { id: 6, name: 'Solid Wood Chair', price: 5500, image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=500&fit=crop', category: 'furniture', badge: 'New' },
+    { id: 7, name: 'Organic Cotton Pillowcase', price: 1200, image: 'https://images.unsplash.com/photo-1584622180039-91f8ba1c1a0e?w=500&h=500&fit=crop', category: 'textile', badge: null },
+    { id: 8, name: 'Hand-thrown Coffee Mug', price: 800, image: 'https://images.unsplash.com/photo-1569701813229-fdc5978d7be8?w=500&h=500&fit=crop', category: 'pottery', badge: 'Best Seller' },
+  ]
+
+  const filteredProducts = products.filter((product) => {
+    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory
+    const matchesPrice = product.price <= priceRange
+    return matchesCategory && matchesPrice
+  })
+
+  return (
+    <section id="shop" className="py-16 px-4 bg-warm-cream scroll-mt-16">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="section-title text-center mb-12">Artisan Shop</h2>
+
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Sidebar Filters */}
+          <div className="lg:w-64 flex-shrink-0">
+            <div className="bg-white p-6 rounded-lg shadow-md sticky top-20">
+              <h3 className="font-serif font-bold text-lg mb-6 text-dark-text">Filters</h3>
+
+              {/* Category Filter */}
+              <div className="mb-6">
+                <h4 className="font-semibold text-dark-text mb-3">Category</h4>
+                <div className="space-y-2">
+                  {['all', 'pottery', 'textile', 'clothing', 'accessories', 'furniture', 'wellness'].map((cat) => (
+                    <label key={cat} className="flex items-center">
+                      <input
+                        type="radio"
+                        name="category"
+                        value={cat}
+                        checked={selectedCategory === cat}
+                        onChange={() => setSelectedCategory(cat)}
+                        className="mr-2"
+                      />
+                      <span className="text-gray-700 capitalize">{cat === 'all' ? 'All Products' : cat}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Price Filter */}
+              <div>
+                <h4 className="font-semibold text-dark-text mb-3">Price Range</h4>
+                <input
+                  type="range"
+                  min="0"
+                  max="10000"
+                  value={priceRange}
+                  onChange={(e) => setPriceRange(Number(e.target.value))}
+                  className="w-full"
+                />
+                <p className="text-gray-600 text-sm mt-2">Up to ₹{priceRange}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Product Grid */}
+          <div className="flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredProducts.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  name={product.name}
+                  price={product.price}
+                  image={product.image}
+                  badge={product.badge}
+                />
+              ))}
+            </div>
+            {filteredProducts.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-500 text-lg">No products found in this price range.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

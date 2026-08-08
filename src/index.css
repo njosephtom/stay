@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif font-bold text-dark-text mb-8;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-sage hover:bg-sage-light text-white rounded-lg transition-colors font-medium;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-warm-cream text-dark-text font-sans;
+}
