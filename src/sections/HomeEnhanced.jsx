@@ -49,20 +49,6 @@ export default function HomeEnhanced() {
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce text-white text-2xl">↓</div>
       </div>
-
-      {/* Featured Farmhouse Image */}
-      <div className="bg-cream py-0 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="rounded-2xl overflow-hidden shadow-2xl h-96 md:h-[500px] fade-on-scroll opacity-0 mb-20">
-            <img
-              src="https://images.unsplash.com/photo-1500382017468-7049fae79e1d?w=1200&h=600&fit=crop"
-              alt="Avni Farmhouse"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Welcome Section */}
       <div className="bg-cream py-24 px-4">
         <div className="max-w-4xl mx-auto text-center fade-on-scroll opacity-0">

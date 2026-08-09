@@ -125,7 +125,7 @@ export default function Farmhouse() {
             </div>
             <div className="fade-on-scroll opacity-0 rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?w=600&h=500&fit=crop"
+                src="/rural-retreat.png"
                 alt="Rural Retreat"
                 className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
               />

@@ -54,7 +54,7 @@ export default function Service() {
             <div className="md:w-1/2">
               <div className="mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1509452773172-056fb7b5ad71?w=300&h=300&fit=crop"
+                  src="/soil-hands.jpg"
                   alt="Soil and Hands"
                   className="w-64 h-64 object-cover rounded-lg shadow-lg"
                 />
