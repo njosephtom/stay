@@ -68,7 +68,13 @@ html {
 }
 
 body {
-  @apply text-dark-text font-sans bg-cream;
+  @apply text-dark-text font-sans;
+  background-image: url('/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px) brightness(0.5);
 }
 
 /* Dark section amenity cards */
