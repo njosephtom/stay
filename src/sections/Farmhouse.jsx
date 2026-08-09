@@ -59,7 +59,7 @@ export default function Farmhouse() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="fade-on-scroll opacity-0 rounded-2xl overflow-hidden shadow-xl order-2 md:order-1">
               <img
-                src="https://images.unsplash.com/photo-1488459716781-6818c6737d7b?w=600&h=500&fit=crop"
+                src="/organic-food-package.jpg"
                 alt="Organic Food"
                 className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
               />
