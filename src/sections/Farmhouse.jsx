@@ -95,7 +95,7 @@ export default function Farmhouse() {
       </div>
 
       {/* Section 3: Rural Retreat */}
-      <div className="bg-white py-20 px-4">
+      <div className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="fade-on-scroll opacity-0">
